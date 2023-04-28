@@ -1,11 +1,11 @@
-const express = require('express')
+import express from 'express'
+import routes from './routes/api.js'
+// import {config} from './config/config.js'
 const app = express();
-const {config} = require('./config/config')
 const router = express.Router()
-import routes from './routes/api'
-app.listen(config.server.port, ()=>{
-    console.log(`Listening at ${config.server.port}`)
+app.listen(4001, ()=>{
+    console.log(`Listening at 4001`)
 })
 
-router.use('/api', routes)
+app.use('/api', routes)
 

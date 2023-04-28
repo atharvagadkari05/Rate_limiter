@@ -17,4 +17,4 @@ const REDIS_PORT = process.env.REDIS_PORT || 6379;
     }
 }
 
-exports.config =config; 
+export default config
